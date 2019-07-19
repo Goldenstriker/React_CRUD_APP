@@ -19,6 +19,7 @@ class App extends Component {
 
   render() {
     return (
+     <Router> 
       <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
@@ -41,6 +42,7 @@ class App extends Component {
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/create" component={CreateTodo} />
         </div>
+     </Router> 
     );
   }
 }
