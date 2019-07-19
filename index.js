@@ -19,8 +19,8 @@ class App extends Component {
 
   render() {
     return (
-     <Router> 
-      <div className="container">
+      <Router>
+        <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/Goldenstriker/React_CRUD_APP@master/logo.png" width="30" height="30" alt="CodingTheSmartWay.com" />
@@ -37,12 +37,12 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-          <br/>
+          <br />
           <Route path="/" exact component={TodoList} />
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/create" component={CreateTodo} />
         </div>
-     </Router> 
+      </Router>
     );
   }
 }
