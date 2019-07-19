@@ -22,7 +22,7 @@ class App extends Component {
       <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+              <img src="https://cdn.jsdelivr.net/gh/Goldenstriker/React_CRUD_APP@master/logo.png" width="30" height="30" alt="CodingTheSmartWay.com" />
             </a>
             <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
             <div className="collpase navbar-collapse">
@@ -37,7 +37,7 @@ class App extends Component {
             </div>
           </nav>
           <br/>
-          <Route path="/" exact component={TodosList} />
+          <Route path="/" exact component={TodoList} />
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/create" component={CreateTodo} />
         </div>
