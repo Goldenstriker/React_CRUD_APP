@@ -7,6 +7,7 @@ import EditTodo from './EditTodo';
 import CreateTodo from './CreateTodo';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "./logo.png";
 
 class App extends Component {
   constructor() {
@@ -18,15 +19,28 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-        <Route path="/" exact component={TodoList} />
-        <Route path="/edit" component={EditTodo} />
-        <Route path="/create" component={CreateTodo} />
-      </Router>
+      <div className="container">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="https://codingthesmartway.com" target="_blank">
+              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+            </a>
+            <Link to="/" className="navbar-brand">MERN-Stack Todo App</Link>
+            <div className="collpase navbar-collapse">
+              <ul className="navbar-nav mr-auto">
+                <li className="navbar-item">
+                  <Link to="/" className="nav-link">Todos</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/create" className="nav-link">Create Todo</Link>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <br/>
+          <Route path="/" exact component={TodosList} />
+          <Route path="/edit/:id" component={EditTodo} />
+          <Route path="/create" component={CreateTodo} />
+        </div>
     );
   }
 }
