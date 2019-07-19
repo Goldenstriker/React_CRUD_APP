@@ -15,12 +15,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Router>
         <Hello name={this.state.name} />
         <p>
           Start editing to see some magic happen :)
         </p>
-      </div>
+      </Router>
     );
   }
 }
