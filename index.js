@@ -1,4 +1,4 @@
-import React, { Component,useState } from 'react';
+import React, { Component, useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Hello from './Hello';
@@ -12,9 +12,14 @@ import logo from "./logo.png";
 class App extends Component {
   constructor() {
     super();
-    initialtodolist ={
-      task:"",
-      id:0
+    const todolist = [
+      { task: "ABC", id: 1 },
+      { task: "DEF", id: 2 },
+      { task: "GHI", id: 3 },
+    ]
+    const initialtodolist = {
+      task: "",
+      id: 0
     }
     this.state = useState(initialtodolist);
   }
