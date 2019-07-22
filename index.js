@@ -12,22 +12,23 @@ import logo from "./logo.png";
 class App extends Component {
   constructor() {
     super();
-    const todolist = [
-      { task: "ABC", id: 1 },
-      { task: "DEF", id: 2 },
-      { task: "GHI", id: 3 },
-    ]
-    const initialtodolist = {
-      task: "",
-      id: 0
-    }
-    this.state = {
-      name:"React"
-    };
-    const [todlists,SetTodoList]= useState(todolist);
-    const [initialtodolist,SetInitialTodoList]= useState(initialtodolist);
-  }
 
+    this.state = {
+      name: "React"
+    };
+
+  }
+   todolist = [
+    { task: "ABC", id: 1 },
+    { task: "DEF", id: 2 },
+    { task: "GHI", id: 3 },
+  ]
+   initialtodolist = {
+    task: "",
+    id: 0
+  };
+  [todlists, SetTodoList]= useState(todolist)
+  [initialtodolist, SetInitialTodoList] = useState(initialtodolist)
   render() {
     return (
       <Router>
