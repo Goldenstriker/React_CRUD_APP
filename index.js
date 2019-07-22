@@ -12,6 +12,10 @@ import logo from "./logo.png";
 class App extends Component {
   constructor() {
     super();
+    initialtodolist ={
+      task:"",
+      id:0
+    }
     this.state = {
       name: 'React'
     };
