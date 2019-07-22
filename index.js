@@ -21,7 +21,11 @@ class App extends Component {
       task: "",
       id: 0
     }
-    this.state = useState(initialtodolist);
+    this.state = {
+      name:"React"
+    };
+    const [todlists,SetTodoList]= useState(todolist);
+    const [initialtodolist,SetInitialTodoList]= useState(initialtodolist);
   }
 
   render() {
