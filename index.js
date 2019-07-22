@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Hello from './Hello';
@@ -16,9 +16,7 @@ class App extends Component {
       task:"",
       id:0
     }
-    this.state = {
-      name: 'React'
-    };
+    this.state = useState(initialtodolist);
   }
 
   render() {
