@@ -27,8 +27,6 @@ class App extends Component {
     task: "",
     id: 0
   };
-  [todlists, SetTodoList]= useState(todolist)
-  [initialtodolist, SetInitialTodoList] = useState(initialtodolist)
   render() {
     return (
       <Router>
