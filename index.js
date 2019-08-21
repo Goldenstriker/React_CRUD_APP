@@ -14,10 +14,16 @@ class App extends Component {
     super();
 
     this.state = {
-      name: "React"
+      name: "React",
+      users:[]
     };
 
   }
+  componentDidMount() {
+        fetch(`https://my-json-server.typicode.com/Goldenstriker/schoolappdb/student`)
+            .then(res => res.json())
+            .then(result => this.setState({ users: result.users }))
+    }
    todolist = [
     { task: "ABC", id: 1 },
     { task: "DEF", id: 2 },
