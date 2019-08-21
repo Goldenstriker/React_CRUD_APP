@@ -54,7 +54,7 @@ class App extends Component {
             </div>
           </nav>
           <br />
-          <TodoList users={this.state.users}>
+          <TodoList users={this.state.users} />
           <Route path="/" exact component={TodoList} />
           <Route path="/edit/:id" component={EditTodo} />
           <Route path="/create" component={CreateTodo} />
