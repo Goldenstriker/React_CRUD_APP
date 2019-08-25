@@ -8,7 +8,7 @@ import CreateTodo from './CreateTodo';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.png";
-
+import Loader from './Loader';
 class App extends Component {
   constructor() {
     super();
@@ -31,6 +31,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+      <Loader/>
         <Router>
           <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
