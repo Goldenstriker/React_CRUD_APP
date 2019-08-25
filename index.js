@@ -52,7 +52,7 @@ class App extends Component {
             <br />
             <Route path="/" exact component={TodoList} />
             <Route path="/edit/:id" component={EditTodo} />
-            <Route path="/create" component={CreateTodo} />
+            <Route path="/create" render={(props)=><CreateTodo {...props}/>} />
 
           </div>
         </Router>
