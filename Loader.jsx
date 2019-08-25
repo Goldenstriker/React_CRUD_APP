@@ -1,6 +1,6 @@
-import React, { Component } from '.React';
+import React, { Component } from 'react';
 
-class Loader extends Component {
+export default class Loader extends Component {
   render() {
     return (
       < React.Fragment >
