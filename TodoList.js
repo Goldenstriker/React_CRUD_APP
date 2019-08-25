@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from './Loader';
 
 export default class TodoList extends Component {
   constructor() {
@@ -20,6 +21,7 @@ export default class TodoList extends Component {
     
     return (
       <React.Fragment>
+      {!this.state.Loaded?<Loader/>:null}
       <ul>
       { this.state.loaded? this.state.users.map((u)=>(
         <li key={u.id}>{u.first_name}</li>
