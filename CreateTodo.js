@@ -54,7 +54,7 @@ export default class CreateTodo extends Component {
             <label>Description: </label>
             <input type="text"
               className="form-control"
-              value={this.state.todo_description}
+              value={this.state.todo_description || this.props.data}
               onChange={this.onChangeTodoDescription}
             />
           </div>
