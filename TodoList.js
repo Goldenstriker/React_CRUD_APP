@@ -15,7 +15,7 @@ export default class TodoList extends Component {
   componentDidMount() {
     fetch(`https://my-json-server.typicode.com/Goldenstriker/schoolappdb/student`)
       .then(res => res.json())
-      .then(result => { setTimeout(function(){this.setState({ loaded: true }); this.setState({ users: result });},5000); })
+      .then(result => { this.setState({ loaded: true }); this.setState({ users: result }); })
   }
   render() {
     
