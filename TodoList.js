@@ -13,10 +13,10 @@ export default class TodoList extends Component {
 
   }
   componentDidMount() {
-    fetch(`https://my-json-server.typicode.com/Goldenstriker/schoolappdb/student`)
-      .then(res => res.json())
-      .then(result => { this.setState({ loaded: true }); this.setState({ users: result }); });
-      axios.get(`http://pwwipro.wiprosupport.com/sites/POC/RESTAPI_SP2013/_api/web/lists/GetByTitle('EmployeeInfo')/items?$select=ID,Name,Designation,Email,DOB,Gender,State/Title,State/Id&$expand=State&$filter=(State gt 0)`).then(result =>console.log( result.json()));
+    axios(`https://my-json-server.typicode.com/Goldenstriker/schoolappdb/student`)
+      .then(result => {console.log(result.data);this.setState({ loaded: true }); this.setState({ users: result.data });})
+      .catch(error=>{console.log(error)});
+      
   }
   render() {
     
