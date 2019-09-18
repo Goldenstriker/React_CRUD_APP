@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Loader from './Loader';
 import axios from 'axios';
-import { Button } from 'semantic-ui-react'
 export default class TodoList extends Component {
   constructor() {
     super();
@@ -29,7 +28,6 @@ export default class TodoList extends Component {
         <li key={u.id}>{u.first_name}</li>
       )):null}
       </ul>
-      <Button>Click Here</Button>
       </React.Fragment>
 
     );
