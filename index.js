@@ -42,7 +42,7 @@ class App extends Component {
     // Train the model using the data.
     this.model.fit(xs, ys, { epochs: 2000 }).then(() => {
       // Use the model to do inference on a data point the model hasn't seen before:
-      this.model.predict(tf.tensor2d([5], [1, 1])).print();
+      Math.round(this.model.predict(tf.tensor2d([5], [1, 1])).print());
       // Open the browser devtools to see the output
     });
   }
