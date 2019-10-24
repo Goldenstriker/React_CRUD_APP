@@ -40,7 +40,7 @@ class App extends Component {
     const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
     // Train the model using the data.
-    this.model.fit(xs, ys, { epochs: 100 }).then(() => {
+    this.model.fit(xs, ys, { epochs: 1000 }).then(() => {
       // Use the model to do inference on a data point the model hasn't seen before:
       this.model.predict(tf.tensor2d([5], [1, 1])).print();
       // Open the browser devtools to see the output
