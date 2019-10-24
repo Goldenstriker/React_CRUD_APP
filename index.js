@@ -32,7 +32,7 @@ class App extends Component {
   predictModel() {
     this.model = tf.sequential();
     this.model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
-
+    this.model.add(tf.layers.dense({units: 1}));
     this.model.compile({ loss: "meanSquaredError", optimizer: "sgd" });
 
     // Generate some synthetic data for training.
@@ -40,9 +40,9 @@ class App extends Component {
     const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
 
     // Train the model using the data.
-    this.model.fit(xs, ys, { epochs: 10000 }).then(() => {
+    this.model.fit(xs, ys, { epochs: 2000 }).then(() => {
       // Use the model to do inference on a data point the model hasn't seen before:
-      this.model.predict(tf.tensor2d([6], [1, 1])).print();
+      this.model.predict(tf.tensor2d([5], [1, 1])).print();
       // Open the browser devtools to see the output
     });
   }
